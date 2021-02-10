@@ -21,4 +21,7 @@ devtools::document(".")
 ## Add weather_weekly_pattern function
 usethis::use_r("weather_weekly_pattern")
 
-##
+## Add packages to the DESCRIPTION file
+usethis::use_package("tibble")
+usethis::use_package("knitr")
+usethis::use_package("lubridate")
