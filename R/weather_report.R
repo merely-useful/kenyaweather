@@ -5,10 +5,7 @@
 #' @returns A gg object with 4 plots showcasing the 4 different variables;
 #' precipitation, average temperature, maximum temperature, minimum temperature.
 weather_report <- function(city){
-  city_filter <- stringr::str_to_upper(city)
-
-  city_data <- weather_data %>%
-    dplyr::filter(name == city_filter) %>%
+  city_data <- city_filter(city) %>%
     tidyr::pivot_longer(cols = prcp:tmin,
                         names_to = "variable",
                         values_to = "value")
