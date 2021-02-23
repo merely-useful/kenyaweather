@@ -4,6 +4,9 @@
     <loc>https://merely-useful.github.io/kenyaweather/index.html</loc>
   </url>
   <url>
+    <loc>https://merely-useful.github.io/kenyaweather/reference/city_filter.html</loc>
+  </url>
+  <url>
     <loc>https://merely-useful.github.io/kenyaweather/reference/pipe.html</loc>
   </url>
   <url>
@@ -11,5 +14,8 @@
   </url>
   <url>
     <loc>https://merely-useful.github.io/kenyaweather/reference/weather_report.html</loc>
+  </url>
+  <url>
+    <loc>https://merely-useful.github.io/kenyaweather/reference/weather_summary.html</loc>
   </url>
 </urlset>
