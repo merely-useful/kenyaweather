@@ -25,3 +25,8 @@ usethis::use_r("weather_weekly_pattern")
 usethis::use_package("tibble")
 usethis::use_package("knitr")
 usethis::use_package("lubridate")
+
+# Pkgdown
+usethis::use_pkgdown()
+usethis::use_github_pages()
+usethis::use_github_action("pkgdown")
