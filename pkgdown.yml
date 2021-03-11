@@ -3,7 +3,7 @@ pkgdown: 1.6.1
 pkgdown_sha: ~
 articles:
   example-report: example-report.html
-last_built: 2021-03-11T03:15Z
+last_built: 2021-03-11T03:30Z
 urls:
   reference: https://merely-useful.github.io/kenyaweather/reference
   article: https://merely-useful.github.io/kenyaweather/articles
