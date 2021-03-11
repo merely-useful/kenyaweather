@@ -1,9 +1,14 @@
 #' Weather Summary
 #'
 #' @description Function to create a weather table yearly summary for a given city
+#'
 #' @param city A string of the name of the city to be reported on
+#'
 #' @returns A knitr::kable table showcasing the yearly summaries of 4 different variables;
 #' precipitation, average temperature, maximum temperature, minimum temperature.
+#'
+#' @export
+#'
 weather_summary <- function(city){
   city_data <- city_filter(city) %>%
     tidyr::pivot_longer(cols = prcp:tmin,

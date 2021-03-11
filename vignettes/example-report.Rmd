@@ -1,0 +1,46 @@
+---
+title: "example-report"
+output: rmarkdown::html_vignette
+vignette: >
+  %\VignetteIndexEntry{example-report}
+  %\VignetteEncoding{UTF-8}
+  %\VignetteEngine{knitr::rmarkdown}
+editor_options: 
+  chunk_output_type: console
+---
+
+```{r, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>",
+  warning = FALSE
+)
+```
+
+```{r setup}
+library(kenyaweather)
+library(dplyr)
+library(ggplot2)
+```
+
+The `kenyaweather` package includes two main functions to provide functionality around accessing weather data for different cities in Kenya. The first function is `weather_report` which generates visualizations of the 4 different variables available for a specified city. 
+
+```{r}
+weather_report("Mombasa")
+```
+
+The second function is the `weather_summary` function which generates a table that shows the year with maximum and minimum, the average across years and the standard deviation of the 4 different variables available for the specified city.
+
+```{r}
+weather_summary("Mombasa")
+```
+
+In addition to these two functions, the package also exports a data frame with the name `weather_data` which allows you to do further exploration and add further functionality such as in the following example:
+
+```{r}
+weather_data %>%
+  filter(name == "MOMBASA") %>%
+  ggplot(aes(x = tmin, y = tavg)) +
+    geom_point(alpha = 0.10) +
+    theme_minimal()
+```
